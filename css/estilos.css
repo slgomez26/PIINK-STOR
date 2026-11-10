@@ -1,0 +1,275 @@
+/* ESTILOS GENERALES */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #fff7fb;
+    color: #241923;
+    line-height: 1.6;
+}
+
+/* ENCABEZADO */
+header {
+    background-color: #1c151c;
+    border-bottom: 4px solid #ed78b5;
+    padding: 15px 6%;
+}
+
+.contenedor {
+    max-width: 1350px;
+    margin: auto;
+}
+
+.encabezado {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.marca {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    text-decoration: none;
+}
+
+.marca img {
+    width: 85px;
+    height: 85px;
+    object-fit: contain;
+    border-radius: 12px;
+}
+
+.marca span {
+    color: #ff8fc7;
+    font-size: 32px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+nav a:hover {
+    color: #ff8fc7;
+}
+
+/* PORTADA */
+.portada {
+    background: linear-gradient(120deg, #ffe0ef, #ee91c2);
+    text-align: center;
+    padding: 130px 20px;
+}
+
+.portada h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    color: #241923;
+}
+
+.portada p {
+    font-size: 21px;
+    margin-bottom: 35px;
+}
+
+.boton {
+    display: inline-block;
+    background-color: #1c151c;
+    color: white;
+    padding: 16px 35px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.boton:hover {
+    background-color: #d93687;
+}
+
+/* SECCIONES */
+.productos,
+.nosotros,
+.contacto {
+    padding: 75px 6%;
+    text-align: center;
+}
+
+.productos h2,
+.nosotros h2,
+.contacto h2 {
+    color: #d93687;
+    font-size: 36px;
+    margin-bottom: 12px;
+}
+
+.subtitulo {
+    margin-bottom: 35px;
+    font-size: 18px;
+}
+
+/* CATÁLOGO */
+.catalogo {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+    align-items: stretch;
+}
+
+/* TARJETAS DE PRODUCTOS */
+.producto {
+    background-color: #f9dceB;
+    border: 1px solid #efacd0;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(80, 30, 60, 0.10);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.producto:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 22px rgba(80, 30, 60, 0.18);
+}
+
+.imagen-producto {
+    width: 100%;
+    height: 310px;
+    object-fit: contain;
+    display: block;
+    background-color: white;
+}
+
+.informacion-producto {
+    padding: 22px 18px;
+}
+
+.informacion-producto h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: #241923;
+}
+
+.precio {
+    color: #d93687;
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.descripcion-producto {
+    font-size: 15px;
+    margin-bottom: 18px;
+}
+
+/* BOTÓN DE WHATSAPP */
+.boton-producto {
+    display: inline-block;
+    background-color: #1c151c;
+    color: white !important;
+    text-decoration: none !important;
+    padding: 11px 20px;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.boton-producto:visited {
+    color: white !important;
+}
+
+.boton-producto:hover {
+    background-color: #d93687;
+    color: white !important;
+    transform: translateY(-2px);
+}
+
+/* NOSOTROS Y CONTACTO */
+.nosotros p,
+.contacto p {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.instagram a {
+    color: #d93687;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.instagram a:hover {
+    text-decoration: underline;
+}
+
+/* PIE DE PÁGINA */
+footer {
+    background-color: #1c151c;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+/* ADAPTACIÓN A CELULARES */
+@media (max-width: 800px) {
+    .catalogo {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .marca span {
+        font-size: 25px;
+    }
+
+    .portada h1 {
+        font-size: 36px;
+    }
+}
+
+@media (max-width: 550px) {
+    .encabezado {
+        flex-direction: column;
+    }
+
+    nav {
+        justify-content: center;
+        gap: 15px;
+    }
+
+    nav a {
+        font-size: 15px;
+    }
+
+    .catalogo {
+        grid-template-columns: 1fr;
+    }
+
+    .imagen-producto {
+        height: 300px;
+    }
+
+    .portada {
+        padding: 85px 15px;
+    }
+
+    .portada h1 {
+        font-size: 30px;
+    }
+}
